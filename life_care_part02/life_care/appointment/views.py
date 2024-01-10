@@ -2,7 +2,6 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from . import models
 from . import serializers
-from rest_framework import fi
 
 # Create your views here.
 

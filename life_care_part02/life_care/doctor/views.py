@@ -25,9 +25,9 @@ class AvailableTimeViewset(viewsets.ModelViewSet):
 class DoctorViewset(viewsets.ModelViewSet):
     queryset = models.Doctor.objects.all()
     serializer_class = serializers.DesignationSerializer
-    filter_backends = [filters.SearchFilter]
-    search_fields = ['user__first_name', 'user__email',
-                     'designation__name', 'specialization__name']
+    # filter_backends = [filters.SearchFilter]
+    # search_fields = ['user__first_name', 'user__email',
+    #                  'designation__name', 'specialization__name']
 
 
 class ReviewViewset(viewsets.ModelViewSet):
