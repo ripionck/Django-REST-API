@@ -1,2 +1,4 @@
-## Django
-## Django REST Framework
+- **Programming Language:** [Python]
+- **Backend:** [Django]
+- **Framework:** [Django REST Framework]
+- **Database:** [SQLite]
