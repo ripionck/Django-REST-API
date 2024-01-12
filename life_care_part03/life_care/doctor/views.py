@@ -20,7 +20,7 @@ class DesignationViewset(viewsets.ModelViewSet):
 
 class AvailableTimeForSpecificDoctor(filters.BaseFilterBackend):
     def filter_queryset(self, request, query_set, view):
-        doctor_id = request.query_params.get('docotr_id')
+        doctor_id = request.query_params.get('doctor_id')
         if doctor_id:
             return query_set.filter(doctor=doctor_id)
         return query_set
@@ -41,7 +41,7 @@ class DoctorPagination(pagination.PageNumberPagination):
 
 class DoctorViewset(viewsets.ModelViewSet):
     queryset = models.Doctor.objects.all()
-    serializer_class = serializers.DesignationSerializer
+    serializer_class = serializers.DoctorSerializer
     filter_backends = [filters.SearchFilter]
     pagination_class = DoctorPagination
     search_fields = ['user__first_name', 'user__email',

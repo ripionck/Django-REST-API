@@ -27,4 +27,4 @@ class Appointment(models.Model):
     cancel = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'Doctor : {self.doctor.user.first_name}, Patient: {self.patient.use.first_name}'
+        return f'Doctor : {self.doctor.user.first_name}, Patient: {self.patient.user.first_name}'
